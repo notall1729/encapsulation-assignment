@@ -17,8 +17,8 @@ public abstract class BankAccount {
 
     public void deposit(double amount){
       if(amount > 0) {
+          System.out.println("The amount of " + amount + " add to account number " + accountNumber);
           amount += balance;
-          System.out.println("The amount of " + amount + "add to account number " + accountNumber);
       }
       else System.out.println("Amount must be positive.");
     }
@@ -26,7 +26,7 @@ public abstract class BankAccount {
     public void withdraw(double amount){
       if(amount > 0 && amount <= balance){
           amount -= balance;
-          System.out.println("The amount of " + amount + "deducte from the account.");
+          System.out.println("The amount of " + amount + " deducte from the account.");
       }
       if(amount > 0 && amount > balance)
           System.out.println("You can not withdraw more than your balance. you balance is: " + balance);
@@ -43,5 +43,9 @@ public abstract class BankAccount {
 
     public String getAccountHolderName() {
         return accountHolderName;
+    }
+
+    public void displayAccountDetails(){
+        System.out.println(accountHolderName + "           " + accountNumber + "         " + balance);
     }
 }
