@@ -18,19 +18,20 @@ public abstract class BankAccount {
     public void deposit(double amount){
       if(amount > 0) {
           System.out.println("The amount of " + amount + " add to account number " + accountNumber);
-          amount += balance;
+          balance = balance + amount;
       }
       else System.out.println("Amount must be positive.");
     }
 
     public void withdraw(double amount){
       if(amount > 0 && amount <= balance){
-          amount -= balance;
+          balance = balance - amount;
           System.out.println("The amount of " + amount + " deducte from the account.");
       }
       if(amount > 0 && amount > balance)
           System.out.println("You can not withdraw more than your balance. you balance is: " + balance);
-      else System.out.println("Amount must be positive.");
+      if(amount <= 0)
+          System.out.println("Amount must be positive.");
     }
 
     public double getBalance() {

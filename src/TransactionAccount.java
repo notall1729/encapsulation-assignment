@@ -13,8 +13,8 @@ public class TransactionAccount extends BankAccount{
     @Override
     public void withdraw(double amount){
         if(amount > 0 && amount <= (balance + overDraftLimit)){
-            amount -= balance;
             System.out.println("The amount of " + amount + " deducte from the account.");
+            balance = balance - amount;
         }
         if(amount > 0 && amount > (balance + overDraftLimit))
             System.out.println("You can not withdraw more than your balance + 500 . you balance is: " + balance);

@@ -24,10 +24,11 @@ public class Main {
 
      System.out.println("Balance of Mohammad is: " + transactionAccount1.getBalance());
      transactionAccount1.deposit(1000);
-     System.out.println(" New balance of Mohammad is: " + transactionAccount1.getBalance());
+     System.out.println("New balance of Mohammad is: " + transactionAccount1.getBalance());
      printLine();
 
      savingAccount2.deposit(-500);
+     printLine();
 
      transactionAccount2.calculateInterest();
      savingAccount1.calculateInterest();
@@ -36,12 +37,22 @@ public class Main {
      printLine();
 
      transactionAccount3.withdraw(1000);
+     printLine();
+
      transactionAccount3.withdraw(-500);
+     printLine();
+
      transactionAccount3.withdraw(580000);
+     printLine();
 
      savingAccount3.withdraw(10000);
+     printLine();
+
      savingAccount3.withdraw(-65);
+     printLine();
+
      savingAccount3.withdraw(170000);
+     printLine();
 
      bank.showAllBalance();
 
