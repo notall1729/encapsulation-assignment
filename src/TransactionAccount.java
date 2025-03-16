@@ -1,4 +1,4 @@
-class TransactionAccount extends BankAccount{
+public class TransactionAccount extends BankAccount{
     private final double overDraftLimit = 500;
 
     public TransactionAccount(String accountHolderName, String accountNumber, double initialBalance){
